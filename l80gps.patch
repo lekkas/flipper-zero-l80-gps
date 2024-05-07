@@ -1,0 +1,44 @@
+--- venv/lib/python3.12/site-packages/microstacknode/hardware/gps/l80gps.py	2024-05-07 23:55:44
++++ l80gps.py	2024-05-07 23:54:55
+@@ -25,23 +25,25 @@
+ 
+ 
+ # setup default GPS device (different on Raspberry Pi 3 and above)
+-def get_rpi_revision():
+-    """Returns the version number from the revision line."""
+-    for line in open("/proc/cpuinfo"):
+-        if "Revision" in line:
+-            return re.sub('Revision\t: ([a-z0-9]+)\n', r'\1', line)
+-
+-
+-rpi_revision = get_rpi_revision()
+-if (rpi_revision and
+-      (rpi_revision != 'Beta') and
+-      (int('0x'+rpi_revision, 16) >= 0xa02082)):
+-    # RPi 3 and above
+-    DEFAULT_GPS_DEVICE = '/dev/ttyS0'
+-else:
+-    # RPi 2 and below
+-    DEFAULT_GPS_DEVICE = '/dev/ttyAMA0'
++#def get_rpi_revision():
++#    """Returns the version number from the revision line."""
++#    for line in open("/proc/cpuinfo"):
++#        if "Revision" in line:
++#            return re.sub('Revision\t: ([a-z0-9]+)\n', r'\1', line)
++#
++#
++#rpi_revision = get_rpi_revision()
++#if (rpi_revision and
++#      (rpi_revision != 'Beta') and
++#      (int('0x'+rpi_revision, 16) >= 0xa02082)):
++#    # RPi 3 and above
++#    DEFAULT_GPS_DEVICE = '/dev/ttyS0'
++#else:
++#    # RPi 2 and below
++#    DEFAULT_GPS_DEVICE = '/dev/ttyAMA0'
+ 
++DEFAULT_GPS_DEVICE = '/dev/cu.usbmodemflip_Otirkara1'
++#DEFAULT_GPS_DEVICE = '/dev/tty.usbmodemflip_Otirkara1'
+ 
+ class NMEAPacketNotFoundError(Exception):
+     pass
