@@ -1,4 +1,4 @@
-# FlipperZero - L80GPS integration
+# FlipperZero - L80 GPS module integration
 
 Found a dusty GPS module in the drawer and decided to give it some life:
 
