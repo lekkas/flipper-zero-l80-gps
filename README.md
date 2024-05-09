@@ -16,6 +16,14 @@ Found a dusty GPS module in the drawer and decided to give it some life:
 
 ![](./media/flipper_l80_schematics.jpg)
 
+## [NMEA] GPS Flipper App
+
+You can also connect your L80 GPS module directly to the Flipper and use the [NMEA] GPS app:
+
+![](./media/flipper-gps-app.jpeg)
+
+![](./media/blink-no-bus.gif)
+
 ## References
 
 - [L80 Datasheet](https://www.quectel.com/wp-content/uploads/2021/03/Quectel_L80_Hardware_Design_V1.5-1.pdf)
